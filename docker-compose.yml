@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: asmar
+      POSTGRES_DB: postgres
     volumes:
       - db_data:/var/lib/postgresql/data
     ports:
@@ -21,7 +21,7 @@ services:
       - db
     environment:
       PORT: 8080
-      DATABASE_URL: postgres://postgres:postgres@db:5432/asmar?sslmode=disable
+      DATABASE_URL: postgres://postgres:postgres@db:5432/postgres?sslmode=disable
       # Add other env vars as needed
     ports:
       - "8080:8080"
